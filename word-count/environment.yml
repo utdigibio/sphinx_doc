@@ -1,0 +1,10 @@
+name: word-count
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python>=3.10
+  - click=8.1.7
+  - matplotlib=3.8.3
+  - snakemake-minimal=8.5.3
+  - pulp<2.8.0

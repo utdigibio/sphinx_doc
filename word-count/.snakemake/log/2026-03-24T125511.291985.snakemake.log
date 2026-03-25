@@ -1,0 +1,77 @@
+Assuming unrestricted shared filesystem usage.
+host: LTBI-HAMZA-L
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+make_plot        4
+all              1
+total            5
+
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Mar 24 12:55:11 2026]
+localrule make_plot:
+    input: code/plot.py, statistics/sierra.data
+    output: plot/sierra.png
+    jobid: 6
+    reason: Missing output files: plot/sierra.png
+    wildcards: file=sierra
+    resources: tmpdir=/tmp
+[Tue Mar 24 12:55:11 2026]
+Finished jobid: 6 (Rule: make_plot)
+1 of 5 steps (20%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Mar 24 12:55:11 2026]
+localrule make_plot:
+    input: code/plot.py, statistics/last.data
+    output: plot/last.png
+    jobid: 5
+    reason: Missing output files: plot/last.png
+    wildcards: file=last
+    resources: tmpdir=/tmp
+[Tue Mar 24 12:55:12 2026]
+Finished jobid: 5 (Rule: make_plot)
+2 of 5 steps (40%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Mar 24 12:55:12 2026]
+localrule make_plot:
+    input: code/plot.py, statistics/isles.data
+    output: plot/isles.png
+    jobid: 8
+    reason: Missing output files: plot/isles.png
+    wildcards: file=isles
+    resources: tmpdir=/tmp
+Select jobs to execute...
+[Tue Mar 24 12:55:12 2026]
+Finished jobid: 8 (Rule: make_plot)
+3 of 5 steps (60%) done
+Execute 1 jobs...
+[Tue Mar 24 12:55:12 2026]
+localrule make_plot:
+    input: code/plot.py, statistics/abyss.data
+    output: plot/abyss.png
+    jobid: 7
+    reason: Missing output files: plot/abyss.png
+    wildcards: file=abyss
+    resources: tmpdir=/tmp
+[Tue Mar 24 12:55:12 2026]
+Finished jobid: 7 (Rule: make_plot)
+4 of 5 steps (80%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Tue Mar 24 12:55:12 2026]
+localrule all:
+    input: statistics/last.data, statistics/sierra.data, statistics/abyss.data, statistics/isles.data, plot/last.png, plot/sierra.png, plot/abyss.png, plot/isles.png
+    jobid: 0
+    reason: Input files updated by another job: plot/sierra.png, plot/isles.png, plot/abyss.png, plot/last.png
+    resources: tmpdir=/tmp
+[Tue Mar 24 12:55:12 2026]
+Finished jobid: 0 (Rule: all)
+5 of 5 steps (100%) done
+Complete log(s): /home/hamza/snakemake/word-count/.snakemake/log/2026-03-24T125511.291985.snakemake.log
