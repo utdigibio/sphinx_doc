@@ -23,7 +23,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install sphinx myst_parser myst_nb groundwork-sphinx-theme
+          pip install sphinx myst_parser myst_nb groundwork-sphinx-theme matplotlib
 
       - name: Build Sphinx docs
         run: |
